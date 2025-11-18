@@ -6,6 +6,10 @@
 }
 
 
+
+
+
+  /* --- Estilos por defecto (para PC - menu en linea) --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -14,6 +18,67 @@ nav {
     color: white;
     padding: 10px 20px;
 }
+
+.nav-list {
+    list-style: none;
+    display: flex; /* Mantiene el menú en línea en PC */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Oculta el botón de hamburguesa por defecto en PC */
+.menu-toggle {
+    display: none;
+    /* Estilos básicos para el botón */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Media Query para Móviles (ancho máximo de 768px) --- */
+@media (max-width: 768px) {
+    /* Muestra el botón de hamburguesa en móviles */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Oculta el menú completo por defecto en móviles (hasta que se haga clic) */
+    .nav-list {
+        display: none;
+        /* Posiciona el menú desplegable */
+        position: absolute;
+        top: 50px; /* Ajusta este valor según la altura de tu barra de navegación */
+        right: 0;
+        width: 100%;
+        background-color: #444;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-list li a {
+        padding: 1rem;
+        display: block; /* Asegura que todo el área del enlace sea clicable */
+    }
+
+    /* Clase que JavaScript añadirá para mostrar el menú */
+    .nav-list.active {
+        display: flex;
+    }
+}
+
+
+
+
+
 
 
 
