@@ -174,6 +174,33 @@ nav li {
 }
 
 
+media (max-width: 768px) {
+    /* Muestra el botón de hamburguesa en móvil */
+    .hamburger-toggle {
+        display: block;
+    }
+
+    /* Estilo del icono de hamburguesa */
+    .hamburger-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: white;
+        transition: 0.4s;
+    }
+	.nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 55px; /* Ajusta según la altura de tu navbar */
+        left: 0;
+    }
+
+/* hasta aqui */
+
 nav a{
 	background: #000;
 	border: 0.1em solid #57ABB8;
